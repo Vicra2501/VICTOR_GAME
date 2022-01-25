@@ -10,10 +10,15 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(800, 600)
-    background(51)
+	
+    let canvas = createCanvas(800, 600)
+    // center the canvas
+    const x = (windowWidth - width) / 2;
+    const y = (windowHeight - height) / 2;
+    canvas.position(x, y);
     game.setup()
     frameRate()
+
    
     
 }
