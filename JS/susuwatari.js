@@ -2,14 +2,22 @@ class Susuwatari {
 
     constructor(image) {
         this.image = image
-        this.x = width
-        this.y = (Math.random() * height) 
+        this.x =  width  
+        // sets different starting points heightwise
+        this.y = (Math.random(height - 100, width - 100) * height) 
         this.width = 50
         this.height = 50
     }
 
+    
+// draws a target accros the canvas
     draw() {
-        this.x--
+        // directio and speed of targets
+        this.x = this.x - 2
+        // up and down movement of target
+        if (frameCount % 30 === 0 ){
+        this.y = this.y + random(-15, 15)
+        }
         image(this.image, this.x, this.y, this.width, this.height)
     }
 
