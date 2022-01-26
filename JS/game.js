@@ -31,9 +31,10 @@ class Game {
         //this.player.draw()
         this.background.draw()
   
-        text('Score:', 25, 50)
-        text(this.score, 80,50)
+        text('Score:',  width / 14, height / 8)
+        text(this.score, width / 6.2, height / 8)
         textFont('Impact', 20)
+        fill(255,255)
 
         // we want to place an action every x frames -> frame count set by p5 to 60fps
         // console.log(frameCount)
@@ -47,7 +48,10 @@ class Game {
         })
 
         // seting the courser for the player
-        cursor('/img/sugarBlue.png')
+        
+            
+            cursor('/img/sugarBlue.png', mouseX, mouseY)
+          
         // setting collision and susu existing screen
         // this.targets = this.targets.filter(target => {
         //     if (target.collision(this.player) || target.x < 0){
@@ -56,7 +60,34 @@ class Game {
         //         return true
         //     }
         // })
-    }
+
+      
+}
+    collision() {
+		// here the susuwatari detects a collision with the sugarstar
+		// the middle of the obstacle
+		let targetX = this.targets.forEach(function(target){target.x})
+		let targetY = this.targets.forEach(function(target){target.y})
+		// the middle of the player
+		let sugarX = this.player.x + this.player.width / 2
+		let sugarY = this.player.y + this.player.height / 2
+		// console.log('collision', playerInfo)
+		if (dist(targetX, targetY, mouseX, mouseY) < 150 ) {
+			// change the score
+			game.score += 1
+			console.log(game.score)
+            
+			return true
+        }
+		//  else {
+		// 	// change the score
+		// 	game.score += 1
+		// 	console.log(game.score)
+
+		// 	return true
+		// }
+	}
+
 }
 
 // obstecals = targets

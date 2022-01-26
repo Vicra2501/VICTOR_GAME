@@ -2,7 +2,6 @@
 // by Victor Sonntag
 //
 console.log('hello')
-
 const game = new Game();
 
 function preload() {
@@ -26,15 +25,19 @@ function setup() {
 function draw() {
     
 	game.draw()
+    game.collision()
 }
 
-function mousePressed() {
-	// if we click the player shoots
-	if (mouseButton) {
-        game.player.shoot()
-	}
+// function mousePressed(){
+    
+//         if (game.collision() ) {
+//             game.targets.splice(i, 1)
+//         }
+    
+// }
 
-}
+
+
 
 
 

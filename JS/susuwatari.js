@@ -1,5 +1,4 @@
 class Susuwatari {
-
     constructor(image) {
         this.image = image
         this.x =  width  
@@ -21,24 +20,24 @@ class Susuwatari {
         image(this.image, this.x, this.y, this.width, this.height)
     }
 
-    collision(playerInfo) {
-		// here the susuwatari detects a collision with the sugarstar
-		// the middle of the obstacle
-		let targetX = this.x + this.width / 2
-		let targetY = this.y + this.height / 2
-		// the middle of the player
-		let sugarX = playerInfo.x + playerInfo.width / 2
-		let sugarY = playerInfo.y + playerInfo.height / 2
-		// console.log('collision', playerInfo)
-		if (dist(targetX, targetY, sugarX, sugarY) > 25) {
-			return false
-		} else {
-			// change the score
-			game.score += 10
-			console.log(game.score)
-			return true
-		}
-	}
+    // collision(playerInfo) {
+	// 	// here the susuwatari detects a collision with the sugarstar
+	// 	// the middle of the obstacle
+	// 	let targetX = this.x + this.width / 2
+	// 	let targetY = this.y + this.height / 2
+	// 	// the middle of the player
+	// 	let sugarX = playerInfo.x + playerInfo.width / 2
+	// 	let sugarY = playerInfo.y + playerInfo.height / 2
+	// 	// console.log('collision', playerInfo)
+	// 	if (dist(targetX, targetY, sugarX, sugarY) > 15) {
+	// 		return false
+	// 	} else {
+	// 		// change the score
+	// 		game.score += 1
+	// 		console.log(game.score)
+	// 		return true
+	// 	}
+	// }
   
     //   // the middle of the pointer
     //   let playerX = playerInfo.x = playerInfo.width / 2
