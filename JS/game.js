@@ -8,6 +8,7 @@ class Game {
         this.player = new Player()
         this.score = 0
         this.imageIndex = 0
+      
     }
 
 
@@ -40,23 +41,23 @@ class Game {
                 { src: loadImage('/img/suzu17.png'), width: 0.1 },
                 { src: loadImage('/img/suzu18.png'), width: 0.1 }
             ]
-        this.scoredTargetImage = 
+        this.scoredTargetImage =
             [
-                { src: loadImage('/img/hit2.png')},
-                { src: loadImage('/img/hit1.png'), width: 50},
+                { src: loadImage('/img/hit2.png') },
+                { src: loadImage('/img/hit1.png'), width: 50 },
                 { src: loadImage('/img/hit3.png'), width: 100 },
-                { src: loadImage('/img/hit4.png'), width: 100},
-                { src: loadImage('/img/hit5.png'), width: 100},
-                { src: loadImage('/img/hit6.png'), width: 100},
-                { src: loadImage('/img/hit7.png'), width: 100},
-                { src: loadImage('/img/hit8.png'), width: 100},
-                { src: loadImage('/img/hit9.png'), width: 100},
-                { src: loadImage('/img/hit10.png'), width: 100},
-                { src: loadImage('/img/hit11.png'), width: 100},
-                { src: loadImage('/img/hit12.png'), width: 100},
-                { src: loadImage('/img/hit13.png'), width: 100},
-                { src: loadImage('/img/hit14.png'), width: 100},
-                { src: loadImage('/img/hit15.png'), width: 100}
+                { src: loadImage('/img/hit4.png'), width: 100 },
+                { src: loadImage('/img/hit5.png'), width: 100 },
+                { src: loadImage('/img/hit6.png'), width: 100 },
+                { src: loadImage('/img/hit7.png'), width: 100 },
+                { src: loadImage('/img/hit8.png'), width: 100 },
+                { src: loadImage('/img/hit9.png'), width: 100 },
+                { src: loadImage('/img/hit10.png'), width: 100 },
+                { src: loadImage('/img/hit11.png'), width: 100 },
+                { src: loadImage('/img/hit12.png'), width: 100 },
+                { src: loadImage('/img/hit13.png'), width: 100 },
+                { src: loadImage('/img/hit14.png'), width: 100 },
+                { src: loadImage('/img/hit15.png'), width: 100 }
             ]
 
         this.cursorImage =
@@ -66,6 +67,13 @@ class Game {
                 '/img/sugarMagenta.png',
                 '/img/sugarYellow.png'
             ]
+
+        this.sounds = loadSound('/sounds/hit1.mp3')
+        // [
+        //     {src: loadSound('/sounds/hit1.mp3')},
+        //     {src: loadSound('/sounds/hit2.mp3')},
+        //     {src: loadSound('/sounds/hit3.mp3')}
+        // ]
     }
 
 
@@ -77,8 +85,8 @@ class Game {
         this.background.draw()
 
         text('Score:', width / 14, height / 8)
-        text(this.score, width / 6.2, height / 8)
-        textFont('Impact', 20)
+        text(this.score, width / 4.2, height / 8)
+        textFont('Impact', 40)
         fill(255, 255)
 
         // we want to place an action every x frames -> frame count set by p5 to 60fps
@@ -87,7 +95,7 @@ class Game {
         let timming = 20 + Math.floor(Math.random() * 40)
         if (frameCount % timming == 0) {
             this.targets.push(new Susuwatari(this.targetImage[Math.floor(Math.random() * this.targetImage.length)].src))
-            timming = Math.floor(Math.random(1,60) * 60)
+            timming = Math.floor(Math.random(1, 60) * 60)
         }
         console.log(this.targets)
         this.targets.forEach(function (target) {
@@ -100,8 +108,9 @@ class Game {
         for (let i = game.targets.length - 1; i >= 0; i--) {
 
             if (game.targets[i].x <= -50) {
-              game.targets.splice(i, 1);
-            }}
+                game.targets.splice(i, 1);
+            }
+        }
     }
     collision() {
         // here the susuwatari detects a collision with the sugarstar
@@ -111,22 +120,31 @@ class Game {
         // the middle of the player
         let sugarX = this.player.x + this.player.width / 2
         let sugarY = this.player.y + this.player.height / 2
-        // console.log('collision', playerInfo)
+        console.log('collision')
         if (dist(targetX, targetY, mouseX, mouseY)) {
             // change the score
             game.score += 1
             console.log(game.score)
+            
 
             return true
         }
-////////// function for switching
+     }
+/////// GAME TIMER & Score 
+ //tbe   
+    //let time = currentTime()
+    gameScore() {
+        if (4 >= 3) {
+            if (this.score < 20) {
+                loadImage('/img/lose.gif', width / 2, height / 2)
+                text('cant call yaself an "sugar daddy", dont ya?', width / 2, height / 2)
+                console.log('display of score')
+            }
+            else if (this.score <= 40) {
+                loadImage('/img/background_starfloor.gif', width / 2, height / 2)
+                text('lul, you are the king of candy mountain....chaaaaaaarlie!', width / 2, height / 2)
+            }
+        }
     }
 
 }
-
-// obstecals = targets
-// from L to R, R to L
-// random up and down
-
-// player has a pointer as mouseXY
-// if clicket on target, obstecal image changes + score++

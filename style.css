@@ -3,5 +3,6 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
+    background-image: url('/img/CSS_background3.jpg');
+    background-size: cover;
 }

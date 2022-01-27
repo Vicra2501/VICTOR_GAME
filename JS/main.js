@@ -16,7 +16,7 @@ function setup() {
   const y = (windowHeight - height) / 2;
   canvas.position(x, y);
   game.setup()
-  frameRate()
+  this.frameRate()
 }
 
 function draw() {
@@ -32,11 +32,9 @@ function mousePressed() {
 if (dist(game.targets[i].x, game.targets[i].y, mouseX - 30, mouseY - 30) < 40) {
       game.score++
       game.targets[i].image = game.scoredTargetImage[Math.floor(Math.random() * game.scoredTargetImage.length)].src
-
-      //game.targets.push(i) = game.scoredTargetImage[Math.floor(Math.random() * game.scoredTargetImage.length)].src
-
-
-
+      this.increment = 0
+      game.sounds.play()
+      this.increment += 1
     }
   }
 }
