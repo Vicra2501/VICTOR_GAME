@@ -4,21 +4,38 @@ class Susuwatari {
         this.x =  width  
         // sets different starting points heightwise
         this.y = (Math.random(height - 100, width - 100) * height) 
-        this.width = 50
-        this.height = 50
+        this.width = 60
+        this.height = 60
+        
     }
 
     
 // draws a target accros the canvas
+
+
     draw() {
         // directio and speed of targets
         this.x = this.x - 5
         // up and down movement of target
-        if (frameCount % 10 === 0 ){
-        this.y = this.y + random(-25, 25)
+         if(frameCount % 5 === 0 || frameCount % 60 <= 30 ){
+        this.y = this.y + random(0, 5)
         }
+        else if(frameCount % 5 === 0 || frameCount % 60 >= 30 ){
+            this.y = this.y + random(-5 , 0)
+            }
+        
         image(this.image, this.x, this.y, this.width, this.height)
     }
+
+    //.b
+    // let verticalMovement = 0
+    // // directio and speed of targets
+    // this.x = this.x - 5
+    // // up and down movement of target
+    // if (frameCount % 10 === 0 && verticalMovement < 25){
+    // //a. this.y = this.y + random(-25, 25)
+    // this.y = this.y + verticalMovement
+    // verticalMovement = verticalMovement + random(0, 25)
 
     // collision(playerInfo) {
 	// 	// here the susuwatari detects a collision with the sugarstar
