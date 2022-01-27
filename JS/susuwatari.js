@@ -12,10 +12,10 @@ class Susuwatari {
 // draws a target accros the canvas
     draw() {
         // directio and speed of targets
-        this.x = this.x - 2
+        this.x = this.x - 5
         // up and down movement of target
-        if (frameCount % 30 === 0 ){
-        this.y = this.y + random(-15, 15)
+        if (frameCount % 10 === 0 ){
+        this.y = this.y + random(-25, 25)
         }
         image(this.image, this.x, this.y, this.width, this.height)
     }
