@@ -20,7 +20,7 @@ class Game {
     }
 
     preload() {
-        this.backgroundImage = loadImage('/img/background_forest.gif')
+        this.backgroundImage = loadImage('img/background_forest.gif')
         this.targetImage =
             [
                 { src: loadImage('img/suzu2.png'), },
