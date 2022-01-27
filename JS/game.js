@@ -84,7 +84,7 @@ class Game {
         // we want to place an action every x frames -> frame count set by p5 to 60fps
         // console.log(frameCount)
         // we add those little mf to the obstacles array
-        let timming = 20
+        let timming = 20 + Math.floor(Math.random() * 40)
         if (frameCount % timming == 0) {
             this.targets.push(new Susuwatari(this.targetImage[Math.floor(Math.random() * this.targetImage.length)].src))
             timming = Math.floor(Math.random(1,60) * 60)

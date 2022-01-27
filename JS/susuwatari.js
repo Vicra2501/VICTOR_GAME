@@ -25,7 +25,7 @@ class Susuwatari {
 
         //     } 
         this.y = this.y + (this.num)
-        if (frameCount % 30 <= Math.random()) {
+        if (frameCount % 30 <= Math.random() || this.y > 600 || this.y < -20) {
             this.num = -this.num 
             if (frameCount % 9 == 0){
                 this.num + random(0,50)
