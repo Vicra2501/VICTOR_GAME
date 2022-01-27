@@ -142,9 +142,9 @@ class Game {
             }
             else if (this.score <= 40) {
                 loadImage('/img/background_starfloor.gif', width / 2, height / 2)
-                text('lul, you are the king of candy mountain....chaaaaaaarlie!', width / 2, height / 2)
+                text('lul, .you are the king of candy mountain....chaaaaaaarlie!', width / 2, height / 2)
             }
-        }
+        } 
     }
 
 }
