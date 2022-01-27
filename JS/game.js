@@ -23,52 +23,52 @@ class Game {
         this.backgroundImage = loadImage('/img/background_forest.gif')
         this.targetImage =
             [
-                { src: loadImage('/img/suzu2.png'), },
-                { src: loadImage('/img/suzu3.png'), width: 50 },
-                { src: loadImage('/img/suzu4.png'), width: 0.1 },
-                { src: loadImage('/img/suzu5.png'), width: 0.1 },
-                { src: loadImage('/img/suzu6.png'), width: 0.1 },
-                { src: loadImage('/img/suzu7.png'), width: 0.1 },
-                { src: loadImage('/img/suzu8.png'), width: 0.1 },
-                { src: loadImage('/img/suzu9.png'), width: 0.1 },
-                { src: loadImage('/img/suzu10.png'), width: 0.1 },
-                { src: loadImage('/img/suzu11.png'), width: 0.1 },
-                { src: loadImage('/img/suzu12.png'), width: 0.1 },
-                { src: loadImage('/img/suzu13.png'), width: 0.1 },
-                { src: loadImage('/img/suzu14.png'), width: 0.1 },
-                { src: loadImage('/img/suzu15.png'), width: 0.1 },
-                { src: loadImage('/img/suzu16.png'), width: 0.1 },
-                { src: loadImage('/img/suzu17.png'), width: 0.1 },
-                { src: loadImage('/img/suzu18.png'), width: 0.1 }
+                { src: loadImage('img/suzu2.png'), },
+                { src: loadImage('img/suzu3.png'), width: 50 },
+                { src: loadImage('img/suzu4.png'), width: 0.1 },
+                { src: loadImage('img/suzu5.png'), width: 0.1 },
+                { src: loadImage('img/suzu6.png'), width: 0.1 },
+                { src: loadImage('img/suzu7.png'), width: 0.1 },
+                { src: loadImage('img/suzu8.png'), width: 0.1 },
+                { src: loadImage('img/suzu9.png'), width: 0.1 },
+                { src: loadImage('img/suzu10.png'), width: 0.1 },
+                { src: loadImage('img/suzu11.png'), width: 0.1 },
+                { src: loadImage('img/suzu12.png'), width: 0.1 },
+                { src: loadImage('img/suzu13.png'), width: 0.1 },
+                { src: loadImage('img/suzu14.png'), width: 0.1 },
+                { src: loadImage('img/suzu15.png'), width: 0.1 },
+                { src: loadImage('img/suzu16.png'), width: 0.1 },
+                { src: loadImage('img/suzu17.png'), width: 0.1 },
+                { src: loadImage('img/suzu18.png'), width: 0.1 }
             ]
         this.scoredTargetImage =
             [
-                { src: loadImage('/img/hit2.png') },
-                { src: loadImage('/img/hit1.png'), width: 50 },
-                { src: loadImage('/img/hit3.png'), width: 100 },
-                { src: loadImage('/img/hit4.png'), width: 100 },
-                { src: loadImage('/img/hit5.png'), width: 100 },
-                { src: loadImage('/img/hit6.png'), width: 100 },
-                { src: loadImage('/img/hit7.png'), width: 100 },
-                { src: loadImage('/img/hit8.png'), width: 100 },
-                { src: loadImage('/img/hit9.png'), width: 100 },
-                { src: loadImage('/img/hit10.png'), width: 100 },
-                { src: loadImage('/img/hit11.png'), width: 100 },
-                { src: loadImage('/img/hit12.png'), width: 100 },
-                { src: loadImage('/img/hit13.png'), width: 100 },
-                { src: loadImage('/img/hit14.png'), width: 100 },
-                { src: loadImage('/img/hit15.png'), width: 100 }
+                { src: loadImage('img/hit2.png') },
+                { src: loadImage('img/hit1.png'), width: 50 },
+                { src: loadImage('img/hit3.png'), width: 100 },
+                { src: loadImage('img/hit4.png'), width: 100 },
+                { src: loadImage('img/hit5.png'), width: 100 },
+                { src: loadImage('img/hit6.png'), width: 100 },
+                { src: loadImage('img/hit7.png'), width: 100 },
+                { src: loadImage('img/hit8.png'), width: 100 },
+                { src: loadImage('img/hit9.png'), width: 100 },
+                { src: loadImage('img/hit10.png'), width: 100 },
+                { src: loadImage('img/hit11.png'), width: 100 },
+                { src: loadImage('img/hit12.png'), width: 100 },
+                { src: loadImage('img/hit13.png'), width: 100 },
+                { src: loadImage('img/hit14.png'), width: 100 },
+                { src: loadImage('img/hit15.png'), width: 100 }
             ]
 
         this.cursorImage =
             [
-                '/img/sugarBlue.png',
-                '/img/sugarGreen.png',
-                '/img/sugarMagenta.png',
-                '/img/sugarYellow.png'
+                'img/sugarBlue.png',
+                'img/sugarGreen.png',
+                'img/sugarMagenta.png',
+                'img/sugarYellow.png'
             ]
 
-        this.sounds = loadSound('/sounds/hit1.mp3')
+        this.sounds = loadSound('sounds/hit1.mp3')
         // [
         //     {src: loadSound('/sounds/hit1.mp3')},
         //     {src: loadSound('/sounds/hit2.mp3')},
